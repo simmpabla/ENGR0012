@@ -213,6 +213,9 @@ while rpeatA == 1
                 fitted_y=polyval(coeff,new_x);
             case 4
                 %This will plot the semi-log function
+                coeff = polyfit(x,log(y),1);
+                new_x = linspace(min(x), max(x), 300);
+                fitted_y = polyval(coeff, new_x);
                 
             case 5
                 %This will plot the log-log
